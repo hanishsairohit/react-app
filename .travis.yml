@@ -7,3 +7,9 @@ before_install:
 
 script:
   - docker run react-app npm run test -- --coverage
+
+deploy:
+  provider: elasticbeansstalk
+  region: "us-west-2"
+  app: "docker"
+  env: "Docker-env"
